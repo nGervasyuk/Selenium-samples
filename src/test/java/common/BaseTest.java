@@ -35,7 +35,7 @@ public class BaseTest {
                     eventDriver.register(new SeleniumListener());
                     driver = eventDriver;
                     break;
-                case CHROME_UBUNTU:
+                case CHROME:
                     setProperty("webdriver.chrome.driver", getProperty("user.dir") + "/drivers/chromedriver");
                     eventDriver = new EventFiringWebDriver(new ChromeDriver());
                     eventDriver.register(new SeleniumListener());
