@@ -1,8 +1,9 @@
 package settings;
 
 public enum Browser {
+
     FIREFOX("firefox"),
-    CHROME_UBUNTU("chrome_ubuntu"),
+    CHROME("chrome"),
     CHROME_WIN("chrome_win");
 
     private String browserName;
