@@ -2,6 +2,7 @@ package steps;
 
 import components.LanguageComponent;
 import io.qameta.allure.Step;
+import org.openqa.selenium.InvalidArgumentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -22,6 +23,7 @@ public class LanguageStep {
 
     @Step("Select interface language")
     public void selectInterfaceLanguage(String language) {
+        language = language.toLowerCase().trim();
         WebElement container = component.getLanguageContainer();
         if (!container.getText().equals(language)) {
             container.click();
@@ -33,8 +35,11 @@ public class LanguageStep {
                     break;
                 }
             }
+            if (!getInterfaceLanguage().equals(language)){
+                throw new InvalidArgumentException("Language '" + language + "' not found in list");
+            }
         } else {
-            LOG.info("Language '" + language.toUpperCase() + "' is already applied");
+            LOG.info("Language '" + language + "' is already applied");
         }
     }
 
