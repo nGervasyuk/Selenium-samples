@@ -14,8 +14,8 @@ import static org.testng.Assert.*;
 import static com.kismia.steps.LanguageStep.*;
 import static com.kismia.steps.LoginStep.*;
 
-@Feature("Interface language")
-@Story("Functional tests for interface language")
+@Feature("User's authorization")
+@Story("Functional tests for login/logout")
 public class LoginTest extends BaseTest {
 
     private LoginStep loginStep;
