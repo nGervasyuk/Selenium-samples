@@ -1,18 +1,18 @@
-package authorization;
+package com.kismia.authorization;
 
-import common.BaseTest;
+import com.kismia.common.BaseTest;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import steps.LanguageStep;
-import steps.LoginStep;
+import com.kismia.steps.LanguageStep;
+import com.kismia.steps.LoginStep;
 
 import static org.testng.Assert.*;
-import static steps.LanguageStep.*;
-import static steps.LoginStep.*;
+import static com.kismia.steps.LanguageStep.*;
+import static com.kismia.steps.LoginStep.*;
 
 @Feature("Interface language")
 @Story("Functional tests for interface language")

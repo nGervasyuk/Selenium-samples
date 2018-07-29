@@ -1,4 +1,4 @@
-package common;
+package com.kismia.common;
 
 import org.openqa.selenium.WebDriver;
 
