@@ -29,23 +29,17 @@ public class BaseTest {
         if (driver == null) {
             Browser browser = TestConfig.getBrowser();
             switch (browser) {
-                case FIREFOX:
-                    setProperty("webdriver.gecko.driver", getProperty("user.dir") + "/drivers/geckodriver");
-                    EventFiringWebDriver eventDriver = new EventFiringWebDriver(new FirefoxDriver());
-                    eventDriver.register(new SeleniumListener());
-                    driver = eventDriver;
-                    break;
                 case CHROME:
                     setProperty("webdriver.chrome.driver", getProperty("user.dir") + "/drivers/chromedriver");
-                    eventDriver = new EventFiringWebDriver(new ChromeDriver());
-                    eventDriver.register(new SeleniumListener());
-                    driver = eventDriver;
+                    registerListener(new ChromeDriver());
+                    break;
+                case FIREFOX:
+                    setProperty("webdriver.gecko.driver", getProperty("user.dir") + "/drivers/geckodriver");
+                    registerListener(new FirefoxDriver());
                     break;
                 case CHROME_WIN:
                     setProperty("webdriver.chrome.driver", getProperty("user.dir") + "/drivers/chromedriver.exe");
-                    eventDriver = new EventFiringWebDriver(new ChromeDriver());
-                    eventDriver.register(new SeleniumListener());
-                    driver = eventDriver;
+                    registerListener(new ChromeDriver());
                     break;
                 default:
                     throw new IllegalStateException("Unsupported browser type");
@@ -72,5 +66,11 @@ public class BaseTest {
     @Attachment(value = "Screenshot", type = "image/png")
     private byte[] captureScreenshot() {
         return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+    }
+
+    private void registerListener(WebDriver driver) {
+        EventFiringWebDriver eventDriver = new EventFiringWebDriver(driver);
+        eventDriver.register(new SeleniumListener());
+        this.driver = eventDriver;
     }
 }
