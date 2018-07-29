@@ -1,6 +1,6 @@
-package components;
+package com.kismia.components;
 
-import common.BaseComponent;
+import com.kismia.common.BaseComponent;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 

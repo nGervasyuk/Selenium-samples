@@ -1,11 +1,11 @@
-package settings;
+package com.kismia.settings;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.Properties;
 
 import static java.lang.ClassLoader.getSystemResource;
-import static settings.Browser.getByName;
+import static com.kismia.settings.Browser.getByName;
 
 public class TestConfig {
     private static Properties properties;
@@ -31,7 +31,7 @@ public class TestConfig {
         if (browserForTests != null) {
             return browserForTests;
         } else {
-            throw new IllegalStateException("settings.Browser name '" + browser + "' is not valid");
+            throw new IllegalStateException("Browser name '" + browser + "' is not valid");
         }
     }
 }

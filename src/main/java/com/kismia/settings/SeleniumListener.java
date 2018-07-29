@@ -1,4 +1,4 @@
-package settings;
+package com.kismia.settings;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;

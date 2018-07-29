@@ -1,4 +1,4 @@
-package common;
+package com.kismia.common;
 
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
@@ -11,9 +11,9 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import settings.Browser;
-import settings.SeleniumListener;
-import settings.TestConfig;
+import com.kismia.settings.Browser;
+import com.kismia.settings.SeleniumListener;
+import com.kismia.settings.TestConfig;
 
 import java.util.concurrent.TimeUnit;
 

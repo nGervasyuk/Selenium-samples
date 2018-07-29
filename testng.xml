@@ -2,11 +2,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Smoke tests" parallel="false">
     <listeners>
-        <listener class-name="settings.TestNGListener"/>
+        <listener class-name="com.kismia.settings.TestNGListener"/>
     </listeners>
     <test name="Interface language">
         <classes>
-            <class name="authorization.LoginTest"/>
+            <class name="com.kismia.authorization.LoginTest"/>
         </classes>
     </test>
 </suite>

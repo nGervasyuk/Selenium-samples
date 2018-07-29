@@ -1,6 +1,6 @@
-package steps;
+package com.kismia.steps;
 
-import components.LanguageComponent;
+import com.kismia.components.LanguageComponent;
 import io.qameta.allure.Step;
 import org.openqa.selenium.InvalidArgumentException;
 import org.openqa.selenium.WebDriver;
@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.urlContains;
-import static settings.SeleniumListener.LOG;
+import static com.kismia.settings.SeleniumListener.LOG;
 
 public class LanguageStep {
 

@@ -1,11 +1,11 @@
-package steps;
+package com.kismia.steps;
 
-import components.LoginComponent;
+import com.kismia.components.LoginComponent;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
-import static settings.TestConfig.getProperty;
+import static com.kismia.settings.TestConfig.getProperty;
 
 public class LoginStep {
 

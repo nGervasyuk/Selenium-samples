@@ -1,4 +1,4 @@
-package settings;
+package com.kismia.settings;
 
 public enum Browser {
 
