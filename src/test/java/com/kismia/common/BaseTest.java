@@ -37,8 +37,8 @@ public class BaseTest {
                     setProperty("webdriver.gecko.driver", getProperty("user.dir") + "/drivers/geckodriver");
                     registerListener(new FirefoxDriver());
                     break;
-                case CHROME_WIN:
-                    setProperty("webdriver.chrome.driver", getProperty("user.dir") + "/drivers/chromedriver.exe");
+                case CHROME_MAC:
+                    setProperty("webdriver.chrome.driver", getProperty("user.dir") + "/drivers/chromedriver_mac");
                     registerListener(new ChromeDriver());
                     break;
                 default:

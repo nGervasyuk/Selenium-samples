@@ -4,7 +4,7 @@ public enum Browser {
 
     CHROME("chrome"),
     FIREFOX("firefox"),
-    CHROME_WIN("chrome_win");
+    CHROME_MAC("chrome_mac");
 
     private String browserName;
 
